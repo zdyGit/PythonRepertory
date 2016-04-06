@@ -15,12 +15,10 @@ Words = str.split(' ')
 
 
 wordic = {}
-wordset = set([])
 
 def Count(Words):
 	for item in Words:
-		if item not in wordset:
-			wordset.add(item)
+		if wordic.get(item) == None:
 			wordic[item] = 1
 		else:
 			wordic[item] = wordic[item]+1
